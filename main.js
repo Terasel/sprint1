@@ -22,7 +22,7 @@ var taskArray = /** @class */ (function () {
         this.arrayTask.push("".concat(tarea.task, " Completado"));
     };
     taskArray.prototype.taskList = function () {
-        console.log(this.arrayTask);
+        return this.arrayTask;
     };
     return taskArray;
 }());
@@ -35,13 +35,5 @@ var Task = /** @class */ (function () {
     return Task;
 }());
 exports.Task = Task;
-var input = new Task('Nueva Tarea', true);
-var input2 = new Task('Otra Tarea', true);
-var input3 = new Task('Chanchito feliz', false);
-var input4 = new Task('Chanchito triste', true);
-var arrayprueba5 = new taskArray([]);
-arrayprueba5.taskAdd(input);
-arrayprueba5.taskAdd(input2);
-arrayprueba5.taskAdd(input3);
-arrayprueba5.taskAdd(input4);
-arrayprueba5.taskList();
+var arrayprueba = new taskArray([]);
+console.log(arrayprueba.arrayTask);

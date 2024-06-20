@@ -7,23 +7,23 @@ export class taskArray {
     constructor(arrayTask: string[]) {
         this.arrayTask = arrayTask;
     }
-    taskAdd(tarea) {
+    taskAdd(tarea:any) {
         if (tarea.isComplete == true) {
             this.arrayTask.push(`${tarea.task} Completado`);
         } else {
             this.arrayTask.push(`${tarea.task} No completado`);
         }
     }
-    taskDelete(tarea) {
+    taskDelete(tarea:any) {
         this.arrayTask.splice(this.arrayTask.indexOf(`${tarea.task} No completado`), 1);
     }
-    taskComplete(tarea) {
+    taskComplete(tarea:any) {
         tarea.isComplete == !tarea.isComplete;
         this.arrayTask.splice(this.arrayTask.indexOf(`${tarea.task} No completado`), 1);
         this.arrayTask.push(`${tarea.task} Completado`);
     }
     taskList() {
-        console.log(this.arrayTask);
+        return this.arrayTask;
     }
 }
 
@@ -39,16 +39,8 @@ export class Task {
 }
 
 
-let input = new Task('Nueva Tarea', true);
-let input2 = new Task('Otra Tarea', true);
-let input3 = new Task('Chanchito feliz', false);
-let input4 = new Task('Chanchito triste', true);
-let arrayprueba5 = new taskArray([]);
-arrayprueba5.taskAdd(input);
-arrayprueba5.taskAdd(input2);
-arrayprueba5.taskAdd(input3);
-arrayprueba5.taskAdd(input4);
 
+let arrayprueba = new taskArray([]);
 
-arrayprueba5.taskList();
+console.log(arrayprueba.arrayTask);
 
