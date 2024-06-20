@@ -23,7 +23,7 @@ export class taskArray {
         this.arrayTask.push(`${tarea.task} Completado`);
     }
     taskList() {
-        return this.arrayTask;
+        console.log(this.arrayTask);
     }
 }
 
@@ -39,8 +39,16 @@ export class Task {
 }
 
 
+let input = new Task('Nueva Tarea', true);
+let input2 = new Task('Otra Tarea', true);
+let input3 = new Task('Chanchito feliz', false);
+let input4 = new Task('Chanchito triste', true);
+let arrayprueba5 = new taskArray([]);
+arrayprueba5.taskAdd(input);
+arrayprueba5.taskAdd(input2);
+arrayprueba5.taskAdd(input3);
+arrayprueba5.taskAdd(input4);
 
-let arrayprueba = new taskArray([]);
 
-console.log(arrayprueba.arrayTask);
+arrayprueba5.taskList();
 
